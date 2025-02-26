@@ -18,3 +18,10 @@ transactionsButton.addEventListener("click", () => {
   toggleBox("cash-out-section", "none");
   toggleBox("transactions-section", "block");
 });
+
+
+const logOut = document.getElementById("logout-button");
+ 
+logOut.addEventListener('click',()=>{
+    window.location.href='./index.html';
+})
