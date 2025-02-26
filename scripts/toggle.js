@@ -1,3 +1,7 @@
+toggleBox("add-money-section", "none");
+toggleBox("cash-out-section", "none");
+toggleBox("transactions-section", "none");
+
 const addMoneyButton = document.getElementById("add-money-button");
 addMoneyButton.addEventListener("click", () => {
   toggleBox("add-money-section", "block");
@@ -19,9 +23,7 @@ transactionsButton.addEventListener("click", () => {
   toggleBox("transactions-section", "block");
 });
 
-
 const logOut = document.getElementById("logout-button");
- 
-logOut.addEventListener('click',()=>{
-    window.location.href='./index.html';
-})
+logOut.addEventListener("click", () => {
+  window.location.href = "./index.html";
+});

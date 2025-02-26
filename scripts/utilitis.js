@@ -9,7 +9,10 @@ function getValueByID(id, i) {
   }
 }
 
-
 function toggleBox(id,status){
   document.getElementById(id).style.display = status;
 }
+
+function genarateTID() {
+  return Math.floor(10000000 + Math.random() * 90000000);
+} 
