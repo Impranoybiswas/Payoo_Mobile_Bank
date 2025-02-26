@@ -31,7 +31,7 @@ cashOut.addEventListener("click", (event) => {
           thRow.innerHTML = `
         <div>
         <h1 class='font-bold'>Cash Out</h1>
-        <p><span class='font-semibold'>Account No</span> : ${accountNumber}</p>
+        <p class='text-xs'><span class='font-semibold'>Account</span> : ${accountNumber}</p>
         <p class='text-xs'>TID : ${genarateTID()}</p>
         </div>
         <div class='text-right'>

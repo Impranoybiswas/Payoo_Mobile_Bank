@@ -49,7 +49,7 @@ addAmount.addEventListener("click", (event) => {
           thRow.innerHTML = `
         <div>
         <h1 class='font-bold'>Add Money</h1>
-        <p><span class='font-semibold'>${bankName}</span> : ${accountNumber}</p>
+        <p class='text-xs'><span class='font-semibold'>${bankName}</span> : ${accountNumber}</p>
         <p class='text-xs'>TID : ${genarateTID()}</p>
         </div>
         <div class='text-right'>
