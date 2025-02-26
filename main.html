@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payoo Mobile Bank</title>
+    <link rel="shortcut icon" href="./assets/Group.png" type="image/x-icon">
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5.0.0-beta.8/daisyui.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body class="bg-slate-800">
+    <main class="max-w-md min-h-screen mx-auto py-6 px-6 bg-gray-200">
+      <header class="flex justify-between items-center">
+        <img class="h-10" src="assets/Group.png" alt="logo" />
+        <p id="main-balance" class="cursor-pointer px-3 py-1 border rounded-md">
+          Check Balance
+        </p>
+        <button class="btn">Log Out</button>
+      </header>
+      <section class="mt-8">
+        <h1 class="font-bold text-2xl mb-2 te">🔥 Welcome to Payooo!</h1>
+        <p class="text-justify">
+          Enjoy easy and convenient financial services with us. Cash Out charge
+          is low and Easy App.
+        </p>
+      </section>
+      <section class="mt-8 grid grid-cols-3 gap-2">
+        <div
+          id="add-money-button"
+          class="card py-4 flex justify-center items-center flex-col bg-white hover:bg-slate-100 cursor-pointer hover:text-blue-500"
+        >
+          <img class="w-8 mb-2" src="./assets/wallet1.png" alt="" />
+          <h2 class="font-semibold">Add Money</h2>
+        </div>
+        <div
+          id="cash-out-button"
+          class="card py-4 flex justify-center items-center flex-col bg-white hover:bg-slate-100 cursor-pointer hover:text-blue-500"
+        >
+          <img class="w-8 mb-2" src="./assets/send1.png" alt="" />
+          <h2 class="font-semibold">Cash Out</h2>
+        </div>
+        <div
+          id=""
+          class="card py-4 flex justify-center items-center flex-col bg-white hover:bg-slate-100 cursor-pointer hover:text-blue-500"
+        >
+          <img class="w-8 mb-2" src="./assets/money1.png" alt="" />
+          <h2 class="font-semibold">Transfer</h2>
+        </div>
+        <div
+          id=""
+          class="card py-4 flex justify-center items-center flex-col bg-white hover:bg-slate-100 cursor-pointer hover:text-blue-500"
+        >
+          <img class="w-8 mb-2" src="./assets/bonus1.png" alt="" />
+          <h2 class="font-semibold">Get Bonus</h2>
+        </div>
+        <div
+          id=""
+          class="card py-4 flex justify-center items-center flex-col bg-white hover:bg-slate-100 cursor-pointer hover:text-blue-500"
+        >
+          <img class="w-8 mb-2" src="./assets/purse1.png" alt="" />
+          <h2 class="font-semibold">Pay Bill</h2>
+        </div>
+        <div
+          id="transactions-button"
+          class="card py-4 flex justify-center items-center flex-col bg-white hover:bg-slate-100 cursor-pointer hover:text-blue-500"
+        >
+          <img class="w-8 mb-2" src="./assets/transaction1.png" alt="" />
+          <h2 class="font-semibold">History</h2>
+        </div>
+      </section>
+      <section id="add-money-section" class="mt-8">
+        <h2 class="font-bold text-center mb-2">Add Money</h2>
+        <form action="">
+          <fieldset class="fieldset w-full">
+            <label class="fieldset-label">Choose Your Route</label>
+            <select class="select w-full">
+              <option value="bkash">BKash</option>
+              <option value="nogod">Nogod</option>
+              <option value="rocket">Rocket</option>
+            </select>
+
+            <label class="fieldset-label">Write Your Ammount</label>
+            <input
+              type="number"
+              id="input-balance"
+              class="input w-full"
+              placeholder="Input Ammount"
+              required
+            />
+            <label class="fieldset-label">Account Number</label>
+            <input
+              value="0123534534568"
+              type="number"
+              id="account-number"
+              class="input w-full"
+              placeholder="Account Number"
+              required
+            />
+            <label class="fieldset-label">PIN Number</label>
+            <input
+              value="1234"
+              type="number"
+              id="pin-number"
+              class="input w-full"
+              placeholder="Your PIN"
+              required
+            />
+            <div id="message" class="text-center text-lg">
+              
+            </div>
+            <button id="add-amount" class="btn btn-success mt-4">
+              Add Amount
+            </button>
+          </fieldset>
+        </form>
+      </section>
+      <section id="cash-out-section" class="mt-8 hidden">
+        <h2 class="font-bold text-center mb-2">Cash Out</h2>
+        <form action="">
+          <fieldset class="fieldset w-full">
+            <label class="fieldset-label">Write Your Ammount</label>
+            <input
+              type="number"
+              id="input-cash-balance"
+              class="input w-full"
+              placeholder="Input Ammount"
+              required
+            />
+            <label class="fieldset-label">Account Number</label>
+            <input
+              value="0123534534568"
+              type="number"
+              id="account-number-cash"
+              class="input w-full"
+              placeholder="Account Number"
+              required
+            />
+            <label class="fieldset-label">PIN Number</label>
+            <input
+              value="1234"
+              type="number"
+              id="pin-number-cash"
+              class="input w-full"
+              placeholder="Your PIN"
+              required
+            />
+            <div id="message-cash" class="text-center text-lg text-red-600">
+                
+            </div>
+            <button id="cash-out" class="btn btn-warning mt-4">Cash Out</button>
+          </fieldset>
+        </form>
+      </section>
+      <section id="transactions-section" class="mt-8 hidden">
+        <h2 class="font-bold text-center mb-2 text-lg">Transactions History</h2>
+        <div id="transactions-history"></div>
+        <div id="main-balance-th" class="p-2 font-bold text-center"></div>
+      </section>
+    </main>
+    <script src="./scripts/utilitis.js"></script>
+    <script src="./scripts/toggle.js"></script>
+    <script src="./scripts/add-money.js"></script>
+    <script src="./scripts/cash-out.js"></script>
+    <script src="./scripts/transactions.js"></script>
+  </body>
+</html>

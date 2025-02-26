@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payoo Mobile Bank</title>
+    <link rel="shortcut icon" href="./assets/Group.png" type="image/x-icon">
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5.0.0-beta.8/daisyui.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body class="bg-slate-800">
+    <main class="max-w-md min-h-screen mx-auto py-6 bg-gray-200">
+      <header
+        class="bg-[url(assets/bg.png)] bg-center bg-no-repeat w-full h-60 flex justify-center items-center"
+      >
+        <img src="assets/Group.png" alt="" />
+      </header>
+
+      <section class="hero-content flex-col lg:flex-row-reverse">
+        <div class="card bg-transparent w-full max-w-sm shrink-0 shadow-xl">
+          <div class="card-body">
+            <form action="">
+              <fieldset class="fieldset">
+                <label class="fieldset-label">Account Number</label>
+                <input
+                  value="0123534534568"
+                  type="number"
+                  id="account-number"
+                  class="input"
+                  placeholder="Account Number"
+                  required
+                />
+                <label class="fieldset-label">PIN Number</label>
+                <input
+                  value="1234"
+                  type="number"
+                  id="pin-number"
+                  class="input"
+                  placeholder="Your PIN"
+                  required
+                />
+                <div><a class="link link-hover">Forgot password?</a></div>
+                <div id="error-msg" class="invisible text-red-400">
+                  warnning
+                </div>
+                <button id="login-button" class="btn btn-neutral mt-4">
+                  Login
+                </button>
+              </fieldset>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="./scripts/login.js"></script>
+  </body>
+</html>
