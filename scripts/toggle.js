@@ -27,3 +27,14 @@ const logOut = document.getElementById("logout-button");
 logOut.addEventListener("click", () => {
   window.location.href = "./index.html";
 });
+
+let addMoneyRow = `<div>
+<h1 class='font-bold'>Add Money</h1>
+<p class='text-xs'><span class='font-semibold'>${bankName}</span> : ${accountNumber}</p>
+<p class='text-xs'>TID : ${genarateTID()}</p>
+</div>
+<div class='text-right'>
+<p class='text-green-800 font-semibold'> + ${inputBalance}</p>
+<p class='text-xs'>${timeTH}</p>
+</div>`;
+const outMoneyRow = ``;

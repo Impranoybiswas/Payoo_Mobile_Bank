@@ -21,7 +21,7 @@
         </p>
         <button id="logout-button" class="btn">Log Out</button>
       </header>
-      <section class="mt-8">
+      <section id="hero-section" class="mt-8">
         <h1 class="font-bold text-2xl mb-2 te">🔥 Welcome to Payooo!</h1>
         <p class="text-justify">
           Enjoy easy and convenient financial services with us. Cash Out charge
@@ -148,9 +148,7 @@
               placeholder="Your PIN"
               required
             />
-            <div id="message-cash" class="text-center text-lg text-red-600">
-                
-            </div>
+            <div id="message-cash" class="text-center text-lg text-red-600"></div>
             <button id="cash-out" class="btn btn-warning mt-4">Cash Out</button>
           </fieldset>
         </form>
@@ -158,13 +156,11 @@
       <section id="transactions-section" class="mt-8">
         <h2 class="font-bold text-center mb-2 text-lg">Transactions History</h2>
         <div id="transactions-history"></div>
-        <div id="main-balance-th" class="p-2 font-bold text-center"></div>
       </section>
     </main>
     <script src="./scripts/utilitis.js"></script>
     <script src="./scripts/toggle.js"></script>
     <script src="./scripts/add-money.js"></script>
     <script src="./scripts/cash-out.js"></script>
-    <script src="./scripts/transactions.js"></script>
   </body>
 </html>
